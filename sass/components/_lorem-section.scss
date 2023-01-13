@@ -1,0 +1,30 @@
+.lorem-section {
+  display: flex;
+  gap: 30px;
+
+  &__icon {
+    background-color: $complementary;
+    padding: 25px 102px;
+    border-radius: 4px;
+  }
+
+  &__header {
+    color: $mainColor;
+    font-size: $textSize;
+    line-height: 1.14;
+    text-transform: uppercase;
+    font-weight: $bold;
+    letter-spacing: $standardSpacing;
+    padding-bottom: 10px;
+    padding-top: 30px;
+    text-align: left;
+  }
+
+  &__paragraph {
+    color: $secondary;
+    font-size: $textSize;
+    line-height: 1.7;
+    font-weight: $thin;
+    letter-spacing: $standardSpacing;
+  }
+}

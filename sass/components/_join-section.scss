@@ -1,0 +1,24 @@
+.join {
+  &__header {
+    @include footer-header;
+    padding-top: 12px;
+  }
+
+  &__social {
+    gap: 10px;
+  }
+
+  &__icon-box {
+    @include social-box;
+    display: flex;
+
+    &:hover {
+      background: $brandColor;
+    }
+  }
+
+  &__icon {
+    fill: $white;
+    vertical-align: middle;
+  }
+}

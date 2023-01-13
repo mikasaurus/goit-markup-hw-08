@@ -1,0 +1,24 @@
+// Global
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: $mainFont;
+}
+
+.list-flex {
+  list-style-type: none;
+  display: flex;
+}
+
+.section {
+  padding-bottom: 94px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}

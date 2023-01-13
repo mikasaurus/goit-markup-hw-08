@@ -1,0 +1,48 @@
+@media screen and (max-width: 1200px) {
+  .mission {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .mission {
+    &__flex {
+      display: flex;
+      justify-content: center;
+    }
+
+    &__header {
+      @include info-header;
+      padding: 0px 424px 50px 424px;
+    }
+
+    &__frame {
+      margin: 15px;
+    }
+
+    &__box {
+      position: relative;
+    }
+
+    &__title {
+      position: absolute;
+      background: $bgOpacity;
+      color: $white;
+      padding: 27px;
+      font-size: 14px;
+      font-weight: $bold;
+      text-align: center;
+      vertical-align: top;
+      letter-spacing: $standardSpacing;
+      text-transform: uppercase;
+      white-space: nowrap;
+      bottom: 0;
+      right: 0;
+      left: 0;
+    }
+
+    &__img {
+      display: block;
+    }
+  }
+}

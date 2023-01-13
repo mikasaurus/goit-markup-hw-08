@@ -1,0 +1,194 @@
+.modal-backdrop {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: $modalBg;
+  transition-property: visibility, opacity;
+  transition-duration: 500ms;
+  transition-timing-function: ease-in-out;
+  z-index: 1;
+}
+
+.is-hidden {
+  pointer-events: none;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.modal {
+  width: 528px;
+  height: 581px;
+  background: $white;
+  box-shadow: $modalShadow;
+  border-radius: 4px;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  visibility: visible;
+  transform: translate(-50%, -50%);
+  padding: 40px;
+
+  &__button {
+    color: $black;
+    background-color: $white;
+    border: 1px solid $modalBg;
+    border-radius: 50%;
+    cursor: pointer;
+    position: absolute;
+    right: 8px;
+    top: 8px;
+    width: 30px;
+    height: 30px;
+
+    &:hover,
+    &:focus {
+      color: $brandColor;
+    }
+  }
+
+  &__header {
+    color: $mainColor;
+    font-size: 20px;
+    line-height: 1.15;
+    font-weight: $bold;
+    text-align: center;
+    letter-spacing: $standardSpacing;
+    margin-bottom: 12px;
+  }
+
+  &__label {
+    color: $secondary;
+    font-style: normal;
+    font-weight: $thin;
+    font-size: 12px;
+    line-height: 1.1;
+    letter-spacing: 0.01em;
+    margin-bottom: 10px;
+    text-align: left;
+    position: relative;
+    display: block;
+  }
+
+  &__icon {
+    position: absolute;
+    top: 33px;
+    left: 15px;
+    fill: $mainColor;
+  }
+  &__input {
+    border: 1px solid $modalBorder;
+    border-radius: 4px;
+    width: 100%;
+    height: 40px;
+    display: block;
+    margin-top: 4px;
+    padding-left: 42px;
+
+    &:hover,
+    &:focus,
+    &:active {
+      border: 1px solid $brandColor;
+      border-radius: 4px;
+      outline: none;
+    }
+  }
+
+  &__comment-box {
+    color: $commentBox;
+    border: 1px solid $modalBorder;
+    border-radius: 4px;
+    letter-spacing: 0.01em;
+    font-weight: $thin;
+    font-size: 12px;
+    line-height: 1.16;
+    font-style: normal;
+    font-family: $mainFont;
+    width: 100%;
+    height: 120px;
+    resize: none;
+    padding: 12px 16px;
+    margin-top: 4px;
+    margin-bottom: 10px;
+
+    &:hover,
+    &:focus,
+    &:active {
+      border: 1px solid $brandColor;
+      border-radius: 4px;
+      outline: none;
+    }
+  }
+
+  &__checkbox-label {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-left: 14px;
+    gap: 7px;
+  }
+
+  &__checkbox {
+    background: $white;
+    appearance: none;
+    border: 2px solid $mainColor;
+    width: 15px;
+    height: 14px;
+    border-radius: 2px;
+    opacity: 0.8;
+  }
+
+  &__checkbox-checked {
+    position: absolute;
+    fill: $white;
+    top: 50%;
+    left: 1px;
+    transform: translateY(-50%);
+    opacity: 0;
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  &__checkbox:checked {
+    border: $brandColor;
+    background: $brandColor;
+  }
+
+  &__terms {
+    font-style: normal;
+    font-weight: $thin;
+    font-size: $textSize;
+    line-height: 1.7;
+    color: $secondary;
+    letter-spacing: $standardSpacing;
+  }
+
+  &__link {
+    color: $brandColor;
+  }
+
+  &__submit-button {
+    @include button;
+    box-shadow: $modalButtonShadow;
+    padding: 10px 76px;
+    margin-top: 30px;
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transform: translateX(50%);
+
+    &:hover,
+    &:focus {
+      box-shadow: $modalSubmitShadow;
+    }
+  }
+}
+
+.modal__label:hover > .modal__icon,
+.modal__label:focus > .modal__icon,
+.modal__label:active > .modal__icon {
+  fill: $brandColor;
+}
+
+.modal__checkbox:checked + .modal__checkbox-checked {
+  opacity: 1;
+  fill: $white;
+}

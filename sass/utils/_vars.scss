@@ -1,0 +1,50 @@
+// Colors
+$mainColor: #212121;
+$secondary: #757575;
+$brandColor: #2196f3;
+$iconColor: #afb1b8;
+$fillerBg: #2f303a;
+$complementary: #f5f4fa;
+$white: #fff;
+$black: #000;
+$filler: #eee;
+$bgGradient: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+  url(../images/background.png);
+$bgOpacity: rgba(47, 48, 58, 0.8);
+$boxOpacity: rgba(255, 255, 255, 0.1);
+$secondaryLink: rgba(255, 255, 255, 0.6);
+$overlayBg: rgba(33, 150, 243, 0.9);
+$modalBg: rgba(0, 0, 0, 0.2);
+$commentBox: rgba(117, 117, 117, 0.5);
+$modalBorder: rgba(33, 33, 33, 0.2);
+$newsletterInput: rgba(255, 255, 255, 0.3);
+$newsletterInputActive: rgba(33, 150, 243, 0.3);
+
+// Fonts
+$mainFont: 'Roboto', sans-serif;
+$secondaryFont: 'Raleway', sans-serif;
+$standardSpacing: 0.03em;
+$wideSpacing: 0.06em;
+$narrowspacing: 0.01em;
+$headerSize: 36px;
+$standardSize: 16px;
+$textSize: 14px;
+$logoSize: 26px;
+$secondaryHeaderSize: 16px;
+$bold: 700;
+$regular: 500;
+$thin: 400;
+
+// Shadows
+$headerUnderline: 0px 4px 4px -4px rgba(0, 0, 0, 0.25);
+$frameShadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+  0px 2px 1px rgba(0, 0, 0, 0.2);
+$buttonShadow: 2px 2px 5px 0px rgba(33, 150, 243, 0.8);
+$portfolioButtonShadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+  0px 2px 2px rgba(0, 0, 0, 0.12);
+$portfolioFrameShadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+  1px 4px 6px rgba(0, 0, 0, 0.16);
+$modalShadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+  0px 2px 1px rgba(0, 0, 0, 0.2);
+$modalSubmitShadow: 5px 5px 5px 0px rgba(117, 117, 117, 1);
+$modalButtonShadow: 0px 4px 4px rgba(0, 0, 0, 0.15);

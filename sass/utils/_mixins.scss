@@ -1,0 +1,53 @@
+@mixin logo {
+  font-family: $secondaryFont;
+  font-weight: $bold;
+  font-size: $logoSize;
+  line-height: 1.19;
+  letter-spacing: 0.03em;
+  text-decoration: none;
+}
+
+@mixin button {
+  font-size: $standardSize;
+  line-height: 1.87;
+  font-weight: $bold;
+  color: $white;
+  background-color: $brandColor;
+  border: $brandColor;
+  text-align: center;
+  letter-spacing: $wideSpacing;
+  border-radius: 4px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+@mixin info-header() {
+  color: $mainColor;
+  font-size: $headerSize;
+  line-height: 1.16;
+  font-weight: $bold;
+  text-align: center;
+  vertical-align: top;
+  letter-spacing: $standardSpacing;
+  white-space: nowrap;
+}
+
+@mixin social-box {
+  background: $boxOpacity;
+  border-radius: 50%;
+  padding: 12px 12px;
+}
+
+@mixin footer-header {
+  color: $white;
+  font-size: $textSize;
+  line-height: 1.16;
+  font-weight: $bold;
+  letter-spacing: $standardSpacing;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+.logo--blue {
+  color: $brandColor;
+}

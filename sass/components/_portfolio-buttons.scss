@@ -1,0 +1,33 @@
+.portfolio-nav {
+  display: flex;
+  margin: 100px auto 50px auto;
+
+  &__btn {
+    background-color: $complementary;
+    color: $mainColor;
+    border: none;
+    border-radius: 4px;
+    text-align: center;
+    font-weight: $regular;
+    font-size: $standardSize;
+    line-height: 1.8;
+    letter-spacing: $standardSpacing;
+    cursor: pointer;
+    padding: 6px 22px;
+    margin-right: 8px;
+
+    &:hover,
+    &:focus {
+      background-color: $brandColor;
+      color: $white;
+      border: none;
+      border-radius: 4px;
+      text-align: center;
+      font-weight: $regular;
+      font-size: $standardSize;
+      line-height: 1.8;
+      letter-spacing: $standardSpacing;
+      box-shadow: $portfolioButtonShadow;
+    }
+  }
+}

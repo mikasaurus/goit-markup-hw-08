@@ -1,0 +1,27 @@
+.clients {
+  &__header {
+    @include info-header;
+    padding: 94px 424px 50px 424px;
+  }
+
+  &__list {
+    justify-content: center;
+    gap: 30px;
+    list-style-type: none;
+    display: flex;
+  }
+
+  &__link {
+    display: block;
+    border: 1px solid $iconColor;
+    border-radius: 4px;
+    fill: $iconColor;
+    padding: 17.71px 32px 14.25px 32px;
+
+    &:hover {
+      fill: $brandColor;
+      border: 1px solid $brandColor;
+      border-radius: 4px;
+    }
+  }
+}
