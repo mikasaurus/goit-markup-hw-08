@@ -1,14 +1,19 @@
 .clients {
+  display: flex;
+  justify-content: center;
+
   &__header {
     @include info-header;
-    padding: 94px 424px 50px 424px;
+    padding-top: 94px;
+    padding-bottom: 50px;
   }
 
   &__list {
     justify-content: center;
     gap: 30px;
     list-style-type: none;
-    display: flex;
+    display: inline-flex;
+    flex-wrap: wrap;
   }
 
   &__link {
@@ -16,12 +21,31 @@
     border: 1px solid $iconColor;
     border-radius: 4px;
     fill: $iconColor;
-    padding: 17.71px 32px 14.25px 32px;
+    padding: 16px 52px;
+    width: 210px;
 
     &:hover {
       fill: $brandColor;
       border: 1px solid $brandColor;
       border-radius: 4px;
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .clients {
+    &__link {
+      padding: 16px 60px;
+      width: 226px;
+    }
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .clients {
+    &__link {
+      padding: 17.71px 32px 14.25px 32px;
+      width: 170px;
     }
   }
 }

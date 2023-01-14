@@ -2,9 +2,10 @@
   background-color: $fillerBg;
 
   &__image {
-    background: $bgGradient;
+    background: $bgGradientMobile;
+    background-size: cover;
     text-align: center;
-    padding: 200px 0;
+    padding: 118px 0;
     margin: 0 auto;
     display: flex;
     text-align: center;
@@ -13,7 +14,7 @@
 
   &__slogan {
     font-weight: 900;
-    font-size: 44px;
+    font-size: 26px;
     line-height: 1.36;
     color: $white;
     text-transform: uppercase;
@@ -37,6 +38,32 @@
       background-color: $white;
       color: $brandColor;
       box-shadow: $buttonShadow;
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .hero {
+    &__image {
+      background: $bgGradientTablet;
+      background-size: cover;
+    }
+
+    &__slogan {
+      font-size: 44px;
+    }
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .hero {
+    &__image {
+      background: $bgGradient;
+      padding: 200px 0;
+    }
+
+    &__slogan {
+      font-size: 44px;
     }
   }
 }

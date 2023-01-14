@@ -9,7 +9,11 @@ $white: #fff;
 $black: #000;
 $filler: #eee;
 $bgGradient: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-  url(../images/background.png);
+  url(../images/background-desktop.png);
+$bgGradientTablet: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+  url(../images/background-tablet.png);
+$bgGradientMobile: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+  url(../images/background-mobile.png);
 $bgOpacity: rgba(47, 48, 58, 0.8);
 $boxOpacity: rgba(255, 255, 255, 0.1);
 $secondaryLink: rgba(255, 255, 255, 0.6);

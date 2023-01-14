@@ -1,15 +1,15 @@
 .newsletter {
-  padding-left: 8px;
-  padding-top: 12px;
-
   &__header {
     @include footer-header;
+    text-align: center;
   }
 
   &__box {
     display: flex;
-    gap: 12px;
-    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    align-items: flex-start;
   }
 
   &__input {
@@ -23,7 +23,7 @@
     font-size: $standardSize;
     line-height: 1.25;
     padding: 15px 295px 15px 16px;
-    max-width: 358px;
+    max-width: 450px;
 
     &:hover,
     &:focus,
@@ -60,4 +60,34 @@
 .newsletter__button:hover > .newsletter__icon,
 .newsletter__button:focus > .newsletter__icon {
   fill: $brandColor;
+}
+
+@media screen and (min-width: 768px) {
+  .newsletter {
+    &__input {
+      margin: 0 166px 0 152px;
+    }
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .newsletter {
+    padding-left: 8px;
+    padding-top: 12px;
+
+    &__header {
+      text-align: left;
+    }
+
+    &__box {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+    }
+
+    &__input {
+      max-width: 358px;
+      margin: 0;
+    }
+  }
 }

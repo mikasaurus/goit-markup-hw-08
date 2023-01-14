@@ -18,8 +18,8 @@
 }
 
 .modal {
-  width: 528px;
-  height: 581px;
+  width: 450px;
+  height: 609px;
   background: $white;
   box-shadow: $modalShadow;
   border-radius: 4px;
@@ -125,7 +125,6 @@
     position: relative;
     display: flex;
     align-items: center;
-    margin-left: 14px;
     gap: 7px;
   }
 
@@ -157,10 +156,11 @@
   &__terms {
     font-style: normal;
     font-weight: $thin;
-    font-size: $textSize;
+    font-size: 12px;
     line-height: 1.7;
     color: $secondary;
     letter-spacing: $standardSpacing;
+    white-space: nowrap;
   }
 
   &__link {
@@ -191,4 +191,19 @@
 .modal__checkbox:checked + .modal__checkbox-checked {
   opacity: 1;
   fill: $white;
+}
+
+@media screen and (min-width: 1200px) {
+  .modal {
+    width: 528px;
+    height: 581px;
+
+    &__checkbox-label {
+      margin-left: 14px;
+    }
+
+    &__terms {
+      font-size: $textSize;
+    }
+  }
 }

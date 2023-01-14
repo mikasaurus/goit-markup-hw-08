@@ -1,16 +1,5 @@
 .header {
-  padding: 25px 0;
-
-  &--underline {
-    box-shadow: $headerUnderline;
-  }
-
-  &__container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-
+  padding: 16px 0;
   &__logo,
   &__logo:link,
   &__logo:visited {
@@ -18,69 +7,145 @@
     color: $black;
   }
 
-  &__nav {
-    gap: 0 93px;
-  }
-
   &__nav-items {
-    gap: 0 46px;
-  }
-
-  &__nav-link:link,
-  &__nav-link:visited {
-    font-size: $textSize;
-    font-weight: $regular;
-    line-height: 1.14;
-    color: $mainColor;
-    letter-spacing: 0.02em;
-    text-decoration: none;
-  }
-
-  &__nav-link:hover,
-  &__nav-link:focus,
-  &__nav-link:active {
-    color: $brandColor;
-  }
-
-  &__nav-link--active {
-    position: relative;
-    color: $brandColor;
-
-    &::after {
-      content: '';
-      position: absolute;
-      display: block;
-      top: 43px;
-      width: 100%;
-      height: 4px;
-      border-radius: 2px;
-      background-color: $brandColor;
-    }
+    display: none;
   }
 
   &__contact {
-    gap: 0 30px;
+    display: none;
   }
+}
 
-  &__contact-link:link,
-  &__contact-link:visited {
-    font-size: $textSize;
-    font-weight: $regular;
-    line-height: 1.14;
-    color: $secondary;
-    letter-spacing: 0.02em;
-    text-decoration: none;
+@media screen and (min-width: 768px) {
+  .header {
+    padding: 25px 0;
+
+    &--underline {
+      box-shadow: $headerUnderline;
+    }
+
+    &__container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    &__logo,
+    &__logo:link,
+    &__logo:visited {
+      @include logo;
+      color: $black;
+    }
+
+    &__nav {
+      gap: 83px;
+    }
+
+    &__nav-items {
+      gap: 60px;
+      display: flex;
+    }
+
+    &__nav-link:link,
+    &__nav-link:visited {
+      font-size: $textSize;
+      font-weight: $regular;
+      line-height: 1.14;
+      color: $mainColor;
+      letter-spacing: 0.02em;
+      text-decoration: none;
+    }
+
+    &__nav-link:hover,
+    &__nav-link:focus,
+    &__nav-link:active {
+      color: $brandColor;
+    }
+
+    &__nav-link--active {
+      position: relative;
+      color: $brandColor;
+
+      &::after {
+        content: '';
+        position: absolute;
+        display: block;
+        top: 53px;
+        width: 100%;
+        height: 4px;
+        border-radius: 2px;
+        background-color: $brandColor;
+      }
+    }
+
+    &__contact {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      align-items: flex-start;
+    }
+
+    &__contact-link:link,
+    &__contact-link:visited {
+      font-size: 12px;
+      font-weight: $regular;
+      line-height: 1.14;
+      color: $secondary;
+      letter-spacing: 0.02em;
+      text-decoration: none;
+    }
+
+    &__contact-link:hover,
+    &__contact-link:active,
+    &__contact-link:focus {
+      color: $brandColor;
+    }
+
+    &__contact-icon {
+      vertical-align: middle;
+      margin-right: 8px;
+      fill: currentColor;
+      opacity: 1;
+    }
   }
+}
 
-  &__contact-link:hover,
-  &__contact-link:active,
-  &__contact-link:focus {
-    color: $brandColor;
-  }
+@media screen and (min-width: 1200px) {
+  .header {
+    &__nav {
+      gap: 93px;
+    }
 
-  &__contact-icon {
-    vertical-align: middle;
-    margin-right: 10px;
-    fill: currentColor;
+    &__nav-items {
+      gap: 46px;
+    }
+
+    &__nav-link--active {
+      &::after {
+        content: '';
+        top: 44px;
+      }
+    }
+
+    &__contact {
+      gap: 30px;
+      flex-direction: row;
+    }
+
+    &__contact-link:link,
+    &__contact-link:visited {
+      font-size: $textSize;
+    }
+
+    &__contact-link:hover,
+    &__contact-link:active,
+    &__contact-link:focus {
+      color: $brandColor;
+    }
+
+    &__contact-icon {
+      margin-right: 10px;
+      opacity: 1;
+    }
   }
 }

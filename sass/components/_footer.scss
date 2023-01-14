@@ -5,6 +5,8 @@
   &__container {
     display: flex;
     gap: 70px;
+    flex-wrap: wrap;
+    justify-content: center;
   }
 
   &__logo,
@@ -13,6 +15,7 @@
     @include logo;
     color: $white;
     padding-bottom: 20px;
+    text-align: center;
   }
 
   &__address {
@@ -21,7 +24,8 @@
     font-size: $textSize;
     line-height: 1.7;
     letter-spacing: $standardSpacing;
-    padding-bottom: 9px;
+    padding-bottom: 8px;
+    text-align: center;
 
     & a:link {
       color: $secondaryLink;
@@ -30,6 +34,29 @@
 
     &--odd {
       text-decoration: underline $secondaryLink;
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .footer {
+    &__container {
+      justify-content: space-between;
+    }
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .footer {
+    &__logo,
+    &__logo a:link,
+    &__logo a:visited {
+      text-align: left;
+    }
+
+    &__address {
+      text-align: left;
+      padding-bottom: 9px;
     }
   }
 }

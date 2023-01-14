@@ -1,7 +1,7 @@
 .join {
   &__header {
     @include footer-header;
-    padding-top: 12px;
+    text-align: center;
   }
 
   &__social {
@@ -20,5 +20,26 @@
   &__icon {
     fill: $white;
     vertical-align: middle;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .join {
+    &__header {
+      padding-top: 5px;
+    }
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .join {
+    &__header {
+      padding-top: 12px;
+    }
+
+    &__icon-box {
+      @include social-box;
+      display: flex;
+    }
   }
 }

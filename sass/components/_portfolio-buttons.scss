@@ -1,6 +1,12 @@
 .portfolio-nav {
   display: flex;
-  margin: 100px auto 50px auto;
+  margin-top: 100px;
+  margin-bottom: 50px;
+
+  &__buttons {
+    gap: 8px;
+    flex-wrap: wrap;
+  }
 
   &__btn {
     background-color: $complementary;
@@ -14,7 +20,6 @@
     letter-spacing: $standardSpacing;
     cursor: pointer;
     padding: 6px 22px;
-    margin-right: 8px;
 
     &:hover,
     &:focus {

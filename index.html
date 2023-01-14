@@ -17,13 +17,7 @@
     <header class="header header--underline">
       <div class="container header__container">
         <button class="menu-toggle js-open-menu" aria-expanded="false" aria-controls="mobile-menu">
-          <svg
-            width="24"
-            height="24"
-            fill="currentColor"
-            viewBox="0 0 20 20"
-            xmlns="http://www.w3.org/2000/svg"
-          >
+          <svg width="24" height="24" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
             <path
               fill-rule="evenodd"
               d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
@@ -73,7 +67,7 @@
       <section class="section">
         <div class="container">
           <div class="lorem-section">
-            <article>
+            <article class="lorem-section__box">
               <div class="lorem-section__icon">
                 <svg width="67" height="70">
                   <use href="./images/icons.svg#icon-antenna"></use>
@@ -85,7 +79,7 @@
                 sodales dui. Interdum et malesuada
               </p>
             </article>
-            <article>
+            <article class="lorem-section__box">
               <div class="lorem-section__icon">
                 <svg width="67" height="70">
                   <use href="./images/icons.svg#icon-clock"></use>
@@ -97,7 +91,7 @@
                 sodales dui. Interdum et malesuada
               </p>
             </article>
-            <article>
+            <article class="lorem-section__box">
               <div class="lorem-section__icon">
                 <svg width="67" height="70">
                   <use href="./images/icons.svg#icon-diagram"></use>
@@ -109,7 +103,7 @@
                 sodales dui. Interdum et malesuada
               </p>
             </article>
-            <article>
+            <article class="lorem-section__box">
               <div class="lorem-section__icon">
                 <svg width="67" height="70">
                   <use href="./images/icons.svg#icon-astronaut"></use>
@@ -175,10 +169,16 @@
           <ul class="list-flex team__box">
             <li class="team__frame">
               <img
-                src="images/productdesigner.jpg"
+                class="team__image"
+                src="images/productdesigner-450.jpg"
                 alt="john doe, product designer"
-                width="270"
-                height="260"
+                srcset="
+                  images/productdesigner-270.jpg 270w,
+                  images/productdesigner-354.jpg 354w,
+                  images/productdesigner-450.jpg 450w
+                "
+                sizes="(min-width: 1200px) 270px, (min-width: 768px) 354px"
+                width="450px"
               />
               <h3 class="team__name">John Doe</h3>
               <p class="team__position">Product designer</p>
@@ -207,10 +207,16 @@
             </li>
             <li class="team__frame">
               <img
-                src="images/frontenddev.jpg"
+                class="team__image"
+                src="images/frontenddev-450.jpg"
                 alt="john doe, frontend developer"
-                width="270"
-                height="260"
+                srcset="
+                  images/frontenddev-270.jpg 270w,
+                  images/frontenddev-354.jpg 354w,
+                  images/frontenddev-450.jpg 450w
+                "
+                sizes="(min-width: 1200px) 270px, (min-width: 768px) 354px"
+                width="450px"
               />
               <h3 class="team__name">John Doe</h3>
               <p class="team__position">Frontend Developer</p>
@@ -238,7 +244,18 @@
               </div>
             </li>
             <li class="team__frame">
-              <img src="images/marketing.jpg" alt="john doe, marketing" width="270" height="260" />
+              <img
+                class="team__image"
+                src="images/marketing-450.jpg"
+                alt="john doe, marketing"
+                srcset="
+                  images/marketing-270.jpg 270w,
+                  images/marketing-354.jpg 354w,
+                  images/marketing-450.jpg 450w
+                "
+                sizes="(min-width: 1200px) 270px, (min-width: 768px) 354px"
+                width="450px"
+              />
               <h3 class="team__name">John Doe</h3>
               <p class="team__position">Marketing</p>
               <div class="team__social-icons">
@@ -266,10 +283,16 @@
             </li>
             <li class="team__frame">
               <img
-                src="images/uidesigner.jpg"
+                class="team__image"
+                src="images/uidesigner-450.jpg"
                 alt="john doe, UI designer"
-                width="270"
-                height="260"
+                srcset="
+                  images/uidesigner-270.jpg 270w,
+                  images/uidesigner-354.jpg 354w,
+                  images/uidesigner-450.jpg 450w
+                "
+                sizes="(min-width: 1200px) 270px, (min-width: 768px) 354px"
+                width="450px"
               />
               <h3 class="team__name">John Doe</h3>
               <p class="team__position">UI Designer</p>
@@ -468,13 +491,7 @@
     </div>
     <div class="menu-container js-menu-container" id="mobile-menu">
       <button class="menu-toggle js-close-menu">
-        <svg
-          fill="currentColor"
-          viewBox="0 0 20 20"
-          xmlns="http://www.w3.org/2000/svg"
-          width="24"
-          height="24"
-        >
+        <svg viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" width="24" height="24">
           <path
             fill-rule="evenodd"
             d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
@@ -483,9 +500,26 @@
         </svg>
       </button>
       <ul class="mobile-menu">
-        <li><a href="" class="link">Agencja</a></li>
-        <li><a href="" class="link">Portfolio</a></li>
-        <li><a href="" class="link">Kontakt</a></li>
+        <li><a href="./" class="mobile-menu__link">Agencja</a></li>
+        <li><a href="./portfolio.html" class="mobile-menu__link">Portfolio</a></li>
+        <li><a href="" class="mobile-menu__link">Kontakt</a></li>
+      </ul>
+      <ul class="mobile-contact">
+        <li><a href="tel:+48111111111" class="mobile-contact__link">+48 111 111 111</a></li>
+        <li>
+          <a href="mailto:info@devstudio.com" class="mobile-contact__odd-link"
+            >info@devstudio.com</a
+          >
+        </li>
+      </ul>
+      <ul class="mobile-social">
+        <li><a href="#" class="mobile-social__link">Instagram</a></li>
+        <span class="break">|</span>
+        <li><a href="#" class="mobile-social__link">Twitter</a></li>
+        <span class="break">|</span>
+        <li><a href="#" class="mobile-social__link">Facebook</a></li>
+        <span class="break">|</span>
+        <li><a href="#" class="mobile-social__link">LinkedIn</a></li>
       </ul>
     </div>
     <script

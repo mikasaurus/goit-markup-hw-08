@@ -1,10 +1,16 @@
 .lorem-section {
-  display: flex;
+  display: inline-flex;
   gap: 30px;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  &__box {
+    width: 450px;
+  }
 
   &__icon {
     background-color: $complementary;
-    padding: 25px 102px;
+    padding: 25px 190px;
     border-radius: 4px;
   }
 
@@ -17,7 +23,7 @@
     letter-spacing: $standardSpacing;
     padding-bottom: 10px;
     padding-top: 30px;
-    text-align: left;
+    text-align: center;
   }
 
   &__paragraph {
@@ -26,5 +32,37 @@
     line-height: 1.7;
     font-weight: $thin;
     letter-spacing: $standardSpacing;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .lorem-section {
+    &__icon {
+      padding: 25px 142px;
+    }
+
+    &__box {
+      width: 354px;
+    }
+
+    &__header {
+      text-align: left;
+    }
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .lorem-section {
+    &__icon {
+      padding: 25px 102px;
+    }
+
+    &__box {
+      width: 270px;
+    }
+
+    &__header {
+      text-align: left;
+    }
   }
 }
