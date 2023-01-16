@@ -1,6 +1,5 @@
 .clients {
   display: flex;
-  justify-content: center;
 
   &__header {
     @include info-header;
@@ -9,11 +8,11 @@
   }
 
   &__list {
-    justify-content: center;
     gap: 30px;
     list-style-type: none;
     display: inline-flex;
     flex-wrap: wrap;
+    justify-content: center;
   }
 
   &__link {
@@ -22,7 +21,7 @@
     border-radius: 4px;
     fill: $iconColor;
     padding: 16px 52px;
-    width: 210px;
+    max-width: 210px;
 
     &:hover {
       fill: $brandColor;
@@ -35,8 +34,8 @@
 @media screen and (min-width: 768px) {
   .clients {
     &__link {
-      padding: 16px 60px;
       width: 226px;
+      padding: 16px 60px;
     }
   }
 }
@@ -44,8 +43,8 @@
 @media screen and (min-width: 1200px) {
   .clients {
     &__link {
-      padding: 17.71px 32px 14.25px 32px;
       width: 170px;
+      padding: 17px 32px;
     }
   }
 }
