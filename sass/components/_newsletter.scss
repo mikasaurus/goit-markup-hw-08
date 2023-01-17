@@ -22,6 +22,8 @@
     font-size: $standardSize;
     line-height: 1.25;
     padding: 15px 16px;
+    max-width: 450px;
+    width: 100%;
 
     &:hover,
     &:focus,
@@ -67,9 +69,6 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
-    }
-    &__input {
-      width: 450px;
     }
   }
 }
