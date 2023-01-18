@@ -170,8 +170,8 @@
     color: $brandColor;
   }
 
-  &__modal__button-box {
-    display: flex;
+  &__button-box {
+    display: grid;
     justify-items: center;
   }
 

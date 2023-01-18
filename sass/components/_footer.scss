@@ -1,6 +1,6 @@
 .footer {
   background-color: $fillerBg;
-  padding: 60px 0px;
+  padding: 60px 0;
 
   &__container {
     display: flex;
@@ -48,6 +48,10 @@
 
 @media screen and (min-width: 1200px) {
   .footer {
+    &__container {
+      justify-content: flex-start;
+    }
+
     &__logo,
     &__logo a:link,
     &__logo a:visited {
